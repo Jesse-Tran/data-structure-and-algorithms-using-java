@@ -11,6 +11,7 @@
 - [Selection Sort](#selection-sort)
 - [Insertion Sort](#insertion-sort)
 - [Shell Sort](#shell-sort)
+- [Merge Sort](#merge-sort)
 
 ### Stable Sort vs Unstable Sort
 
@@ -31,11 +32,16 @@
 
 #### _Which sorting algorithms are unstable?_
 
-- Quick Sort, Heap Sort etc., can be made stable by also taking the position of the elements into consideration. This change may be done in a way which does not compromise a lot on the performance and takes some extra space, possibly
-\theta(n).
+- Quick Sort, Heap Sort etc., can be made stable by also taking the position of the elements into consideration. This
+  change may be done in a way which does not compromise a lot on the performance and takes some extra space, possibly
+  \theta(n).
 
 #### _Can we make any sorting algorithm stable?_
-- Any given sorting algo which is not stable can be modified to be stable. There can be sorting algo specific ways to make it stable, but in general, any comparison based sorting algorithm which is not stable by nature can be modified to be stable by changing the key comparison operation so that the comparison of two keys considers position as a factor for objects with equal keys.
+
+- Any given sorting algo which is not stable can be modified to be stable. There can be sorting algo specific ways to
+  make it stable, but in general, any comparison based sorting algorithm which is not stable by nature can be modified
+  to be stable by changing the key comparison operation so that the comparison of two keys considers position as a
+  factor for objects with equal keys.
 
 ### Bubble Sort
 
@@ -65,4 +71,16 @@
 - Difficult to nail down the time complexity because it will depend on the gap. Worst case: $O(n^2)$, but it can perform
   much better than that
 - Doesn't require as much shifting as insertion sort, so it usually performs better
+- Unstable algorithm
+
+### Merge Sort
+
+- NOT an in-place algorithm
+- O(nlogn) - base 2. We're repeatedly dividing the array in half during the splitting phase
+- Stable algorithm
+
+### Quick Sort
+
+- In-place algorithm
+- 0(nlogn) - base 2. We're repeatedly partitioning the array into two halves
 - Unstable algorithm
